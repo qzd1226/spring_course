@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- insert junit dependency-->
+
+
+
+    <!-- constructor insert
+
+    <constructor-arg> label: one <constructor-arg> construct one parameter
+    <constructor-arg> label properties:
+        name: the parameter name of construct function
+        index: location of construct function. from left to right is 0,1,2,3...
+        value: if the parameter of construct function is normal, use value,
+        else use ref.
+    -->
+
+    <bean id = "myStudent" class ="org.example.bi03.Student" >
+        <constructor-arg name ="myname" value ="william"/>
+        <constructor-arg name ="myage" value = "20"/>
+        <constructor-arg name = "mySchool" ref = "mySchool"/>
+    </bean>
+
+    <!-- announce school object -->
+    <bean id = "mySchool" class = "org.example.bi02.School">
+        <property name = "name" value = "UVA"/>
+        <property name="address" value = "CHO"/>
+    </bean>
+    <!-- insert reference content
+    <bean id ="xxx" class ="yyy">
+        <property name ="propertyName" ref = "bean's id(object name)"/>
+    </bean>
+
+
+    -->
+
+</beans>

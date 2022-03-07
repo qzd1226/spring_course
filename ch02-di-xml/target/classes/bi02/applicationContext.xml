@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- insert junit dependency-->
+
+
+
+    <!-- acknowledge student object-->
+    <!-- set insert : spring use the set function of class
+        <bean id = "xx" class = "yyy">
+        <property name = "propertyname value="value"
+        it actually use the set function in class
+        />
+    -->
+    <bean id = "myStudent" class ="org.example.bi02.Student" >
+        <property name = "name" value = "zongdi" />
+        <property name = "age" value = "20" />
+        <!--reference type -->
+        <property name="school" ref = "mySchool"/>
+    </bean>
+
+    <!-- announce school object -->
+    <bean id = "mySchool" class = "org.example.bi02.School">
+        <property name = "name" value = "UVA"/>
+        <property name="address" value = "CHO"/>
+    </bean>
+    <!-- insert reference content
+    <bean id ="xxx" class ="yyy">
+        <property name ="propertyName" ref = "bean's id(object name)"/>
+    </bean>
+
+
+    -->
+
+</beans>
