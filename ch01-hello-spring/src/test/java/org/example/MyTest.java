@@ -25,6 +25,21 @@ public class MyTest {
         service.doSome();
     }
 
+    // get the information of object in spring container
+    @Test
+    public void test02(){
+        String config = "beans.xml";
+        ApplicationContext ac = new ClassPathXmlApplicationContext(config);
+        // use the function in spring to find the number of object in container
+        int nums = ac.getBeanDefinitionCount();
+        System.out.println("numbers of object in container:"+nums);
+        //the name of object
+        String names[] = ac.getBeanDefinitionNames();
+        for(String name: names){
+            System.out.println(name);
+        }
+    }
+
 
 
 
