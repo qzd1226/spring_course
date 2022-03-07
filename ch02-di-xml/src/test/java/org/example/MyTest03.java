@@ -16,5 +16,8 @@ public class MyTest03 {
         Student myStudent = (Student) ac.getBean("myStudent");
         System.out.println("student:" + myStudent);
 
+        Student myStudent2 = (Student) ac.getBean("myStudent2");
+        System.out.println("student:" + myStudent2);
+
     }
 }

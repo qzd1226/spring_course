@@ -27,12 +27,12 @@
         <property name = "name" value = "UVA"/>
         <property name="address" value = "CHO"/>
     </bean>
-    <!-- insert reference content
-    <bean id ="xxx" class ="yyy">
-        <property name ="propertyName" ref = "bean's id(object name)"/>
+
+    <!-- use index property-->
+    <bean id = "myStudent2" class = "org.example.bi03.Student">
+        <constructor-arg index = "0" value ="qzd"/>
+        <constructor-arg index = "1" value = "29"/>
+        <constructor-arg index = "2" ref = "mySchool"/>
     </bean>
-
-
-    -->
 
 </beans>
