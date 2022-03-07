@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Date;
+
 public class MyTest {
     @Test
     public void test01(){
@@ -38,6 +40,22 @@ public class MyTest {
         for(String name: names){
             System.out.println(name);
         }
+    }
+    // create object whose class is exist.
+    @Test
+    public void test03(){
+        String config = "beans.xml";
+        ApplicationContext ac = new ClassPathXmlApplicationContext(config);
+        // use the function in spring to find the number of object in container
+        int nums = ac.getBeanDefinitionCount();
+        System.out.println("numbers of object in container:"+nums);
+        //the name of object
+        String names[] = ac.getBeanDefinitionNames();
+        for(String name: names){
+            System.out.println(name);
+        }
+        Date my = (Date) ac.getBean("mydate");
+        System.out.println(my);
     }
 
 
