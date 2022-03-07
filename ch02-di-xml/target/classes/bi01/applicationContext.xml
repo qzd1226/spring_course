@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- insert junit dependency-->
+
+
+
+    <!-- acknowledge student object-->
+    <!-- set insert : spring use the set function of class
+        <bean id = "xx" class = "yyy">
+        <property name = "propertyname value="value"
+        it actually use the set function in class
+        />
+    -->
+    <bean id = "myStudent" class ="org.example.bi01.Student" >
+        <property name = "name" value = "zongdi" />
+        <property name = "age" value = "20" />
+    </bean>
+</beans>
