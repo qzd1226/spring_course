@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+        spring can create new obj
+        SomeService someService = new SomeServiceImpl();
+        Spring can put the created object into map, there is a map in spring
+        framework
+        springMap.put("someService,new SomeServiceImpl());
+    -->
+    <bean id = "someService" class="org.example.service.impl.SomeServiceImpl"/>
+    <bean id = "someService1" class="org.example.service.impl.SomeServiceImpl"/>
+
+</beans>
+
